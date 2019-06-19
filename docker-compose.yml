@@ -1,7 +1,7 @@
 version: '3'
 services:
-  web:
-    build: .
+  upload-service:
+    build: upload-application/.
     ports:
       - "8080:8080"
   redis:

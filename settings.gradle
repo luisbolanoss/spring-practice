@@ -1,1 +1,3 @@
 rootProject.name = 'spring-practice'
+include 'upload-application'
+
