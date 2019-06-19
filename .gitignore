@@ -1,5 +1,6 @@
 .gradle
-**/build/
+/build/
+/upload-application/build/
 /.idea/
 /gradle/
 gradlew
