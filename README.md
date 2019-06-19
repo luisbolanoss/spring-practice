@@ -5,12 +5,12 @@
 - Gradle 5.4.1 or higher
 - JRE or SDK JAVA 1.8 or higher
 
-## Run with gradle
+## Run all modules and Docker containers
 ```sh
-gradle bootrun
+gradle composeUp
 ```
 
-## Run with Docker Compose
+## Stop application and Docker containers
 ```sh
-docker compose up
+gradle composeDown
 ```

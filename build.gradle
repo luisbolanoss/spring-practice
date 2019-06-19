@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.4.RELEASE")
+    }
+}
+
+plugins {
+    id 'com.avast.gradle.docker-compose' version '0.7.1'
+}
+
+dockerCompose {
+    useComposeFiles = ['docker-compose.yml']
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    apply plugin: org.springframework.boot.gradle.plugin.SpringBootPlugin
+    apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
