@@ -1,0 +1,8 @@
+version: '3'
+services:
+  upload-service:
+    build: upload-application/.
+    ports:
+      - "8080:8080"
+  redis:
+    image: "redis:alpine"

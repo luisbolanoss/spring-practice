@@ -1,7 +1,7 @@
 package hello.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
-import hello.model.Greeting;
+import hello.model.GreetingModel;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,8 +23,8 @@ public class GreetingController {
   }
 
   @GetMapping("/hello")
-  public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
-    return new Greeting(counter.incrementAndGet(),
+  public GreetingModel greeting(@RequestParam(value="name", defaultValue="World") String name) {
+    return new GreetingModel(counter.incrementAndGet(),
         String.format(template, name));
   }
 
